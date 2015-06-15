@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA8DCFA21B2F61B1001D260E /* UIView+AutoLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8DCFA01B2F61B1001D260E /* UIView+AutoLayoutHelper.m */; };
 		AAF54A061B2F57D000CBDB96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF54A051B2F57D000CBDB96 /* main.m */; };
 		AAF54A091B2F57D000CBDB96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF54A081B2F57D000CBDB96 /* AppDelegate.m */; };
 		AAF54A0C1B2F57D000CBDB96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF54A0B1B2F57D000CBDB96 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA8DCFA01B2F61B1001D260E /* UIView+AutoLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayoutHelper.m"; sourceTree = "<group>"; };
+		AA8DCFA11B2F61B1001D260E /* UIView+AutoLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayoutHelper.h"; sourceTree = "<group>"; };
 		AAF54A001B2F57D000CBDB96 /* AutoLayoutHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF54A041B2F57D000CBDB96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAF54A051B2F57D000CBDB96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 		AAF54A021B2F57D000CBDB96 /* AutoLayoutHelper */ = {
 			isa = PBXGroup;
 			children = (
+				AA8DCFA11B2F61B1001D260E /* UIView+AutoLayoutHelper.h */,
+				AA8DCFA01B2F61B1001D260E /* UIView+AutoLayoutHelper.m */,
 				AAF54A071B2F57D000CBDB96 /* AppDelegate.h */,
 				AAF54A081B2F57D000CBDB96 /* AppDelegate.m */,
 				AAF54A0A1B2F57D000CBDB96 /* ViewController.h */,
@@ -222,6 +227,7 @@
 				AAF54A0C1B2F57D000CBDB96 /* ViewController.m in Sources */,
 				AAF54A091B2F57D000CBDB96 /* AppDelegate.m in Sources */,
 				AAF54A061B2F57D000CBDB96 /* main.m in Sources */,
+				AA8DCFA21B2F61B1001D260E /* UIView+AutoLayoutHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
