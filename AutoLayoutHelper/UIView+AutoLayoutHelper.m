@@ -21,12 +21,15 @@
     
     UIView *superview = self.superview;
     
-    NSLayoutConstraint *topConstraint = [self addTopConstraintToView:superview relation:NSLayoutRelationEqual constant:0.0];
-    NSLayoutConstraint *leftConstraint = [self addLeftConstraintToView:superview relation:NSLayoutRelationEqual constant:0.0];
-    NSLayoutConstraint *bottomConstraint = [self addBottomConstraintToView:superview relation:NSLayoutRelationEqual constant:0.0];
-    NSLayoutConstraint *rightConstraint = [self addRightConstraintToView:superview relation:NSLayoutRelationEqual constant:0.0];
+    if (superview != nil)
+    {
+        NSLayoutConstraint *topConstraint = [self addTopConstraintToView:superview relation:NSLayoutRelationEqual constant:0.0];
+        NSLayoutConstraint *leftConstraint = [self addLeftConstraintToView:superview relation:NSLayoutRelationEqual constant:0.0];
+        NSLayoutConstraint *bottomConstraint = [self addBottomConstraintToView:superview relation:NSLayoutRelationEqual constant:0.0];
+        NSLayoutConstraint *rightConstraint = [self addRightConstraintToView:superview relation:NSLayoutRelationEqual constant:0.0];
 
-    constraints = @[topConstraint, leftConstraint, bottomConstraint, rightConstraint];
+        constraints = @[topConstraint, leftConstraint, bottomConstraint, rightConstraint];
+    }
     
     return constraints;
 }
