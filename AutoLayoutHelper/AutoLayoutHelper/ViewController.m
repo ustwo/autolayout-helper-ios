@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIView+AutoLayoutHelper.h"
 
 @interface ViewController ()
 
@@ -14,14 +15,53 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self testAddTopLeftRightBottomConstraints];
+    [self testAddWidthHeightConstraints];
+    [self testAddCenterXCenterXConstraints];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)testAddTopLeftRightBottomConstraints
+{
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectZero];
+    leftView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:leftView];
+
+    leftView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [leftView addTopConstraintToView:leftView.superview attribute:NSLayoutAttributeTop relation:NSLayoutRelationEqual constant:10.0];
+    [leftView addLeftConstraintToView:leftView.superview attribute:NSLayoutAttributeLeft relation:NSLayoutRelationEqual constant:10.0];
+    [leftView addRightConstraintToView:leftView.superview attribute:NSLayoutAttributeRight relation:NSLayoutRelationEqual constant:-10.0];
+    [leftView addBottomConstraintToView:leftView.superview attribute:NSLayoutAttributeBottom relation:NSLayoutRelationEqual constant:-10.0];
+}
+
+- (void)testAddCenterXCenterXConstraints
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.text = @"Some centered text";
+    
+    label.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:label];
+
+    label.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [label addCenterXConstraintToView:label.superview relation:NSLayoutRelationEqual constant:0.0];
+    [label addCenterYConstraintToView:label.superview relation:NSLayoutRelationEqual constant:0.0];
+}
+
+- (void)testAddWidthHeightConstraints
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
+    view.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:view];
+    
+    view.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [view addWidthConstraintWithRelation:NSLayoutRelationEqual constant:100.0];
+    [view addHeightConstraintWithRelation:NSLayoutRelationEqual constant:80.0];
 }
 
 @end
