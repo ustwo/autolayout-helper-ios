@@ -50,7 +50,7 @@ or shorter assuming top to top, left to left, right to right and bottom to botto
     [leftView addRightConstraintToView:leftView.superview relation:NSLayoutRelationEqual constant:-10.0];
     [leftView addBottomConstraintToView:leftView.superview relation:NSLayoutRelationEqual constant:-10.0];
 
-or more succinctly:
+or even more succinctly:
 
 	[leftView fillSuperview:UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)];
 
@@ -65,7 +65,7 @@ Add constraints for a fixed width and height amount:
     [view addWidthConstraintWithRelation:NSLayoutRelationEqual constant:100.0];
     [view addHeightConstraintWithRelation:NSLayoutRelationEqual constant:80.0];
 
-Modify constraints after creation and animate the changes:
+Modify constraints (since the methods return them to you)
 
 	// Store the height constraint when its created
 
@@ -73,10 +73,12 @@ Modify constraints after creation and animate the changes:
 
 	...
 
-	// Modify the height constraint's amount animate the changes 
+	// Modify height amount
 
 	self.heightConstraint.constant = 30.0;
 
+    // Animate changes
+    
 	[UIView animateWithDuration:0.3 animations:^{
             [view layoutIfNeeded];
         }];
