@@ -59,7 +59,7 @@
 
 - (NSLayoutConstraint *)addRightConstraintToView:(UIView *)toView relation:(NSLayoutRelation)relation constant:(CGFloat)constant
 {
-    return [self addRightConstraintToView:toView attribute:NSLayoutAttributeRight relation:relation constant:0.0];
+    return [self addRightConstraintToView:toView attribute:NSLayoutAttributeRight relation:relation constant:constant];
 }
 
 - (NSLayoutConstraint *)addRightConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant
@@ -79,7 +79,7 @@
 
 - (NSLayoutConstraint *)addTopConstraintToView:(UIView *)toView relation:(NSLayoutRelation)relation constant:(CGFloat)constant
 {
-    return [self addTopConstraintToView:toView attribute:NSLayoutAttributeTop relation:relation constant:0.0];
+    return [self addTopConstraintToView:toView attribute:NSLayoutAttributeTop relation:relation constant:constant];
 }
 
 - (NSLayoutConstraint *)addTopConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant
@@ -99,7 +99,7 @@
 
 - (NSLayoutConstraint *)addBottomConstraintToView:(UIView *)toView relation:(NSLayoutRelation)relation constant:(CGFloat)constant
 {
-    return [self addBottomConstraintToView:toView attribute:NSLayoutAttributeBottom relation:relation constant:0.0];
+    return [self addBottomConstraintToView:toView attribute:NSLayoutAttributeBottom relation:relation constant:constant];
 }
 
 - (NSLayoutConstraint *)addBottomConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant
