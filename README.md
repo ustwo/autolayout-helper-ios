@@ -57,27 +57,26 @@ or more succinctly:
 
 Add constraints to center a UIView in its superview both vertically (Y) and horizontally (X): 
 
-    label.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    // Note. these methods will create, return and add the constraint to the superview.
-     
     [label addCenterXConstraintToView:label.superview relation:NSLayoutRelationEqual constant:0.0];
     [label addCenterYConstraintToView:label.superview relation:NSLayoutRelationEqual constant:0.0];
     
 Add constraints for a fixed width and height amount:
 
-    // Note. these methods will create, return and add the constraint to the superview.
-    
     [view addWidthConstraintWithRelation:NSLayoutRelationEqual constant:100.0];
     [view addHeightConstraintWithRelation:NSLayoutRelationEqual constant:80.0];
 
 Modify constraints after creation and animate the changes:
 
-    // Note. these methods will create, return and add the constraint to the superview.
+	// Store the height constraint when its created
 
-	NSLayoutConstraint *heightConstraint = [view addHeightConstraintWithRelation:NSLayoutRelationEqual constant:80.0];
+	self.heightConstraint = [view addHeightConstraintWithRelation:NSLayoutRelationEqual constant:80.0];
 
-	heightConstraint.constant = 30.0;
+	...
+
+	// Modify the height constraint's amount animate the changes 
+
+	self.heightConstraint.constant = 30.0;
+
 	[UIView animateWithDuration:0.3 animations:^{
             [view layoutIfNeeded];
         }];
