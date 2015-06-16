@@ -19,12 +19,12 @@
 {
     [super viewDidLoad];
     
-    [self testAddTopLeftRightBottomConstraints];
-    [self testAddWidthHeightConstraints];
-    [self testAddCenterXCenterXConstraints];
+    [self createViewWithAddTopLeftRightBottomConstraints];
+    [self createViewWithAddWidthHeightConstraints];
+    [self createViewWithCenterXCenterYConstraints];
 }
 
-- (void)testAddTopLeftRightBottomConstraints
+- (void)createViewWithAddTopLeftRightBottomConstraints
 {
     UIView *leftView = [[UIView alloc] initWithFrame:CGRectZero];
     leftView.backgroundColor = [UIColor redColor];
@@ -38,7 +38,7 @@
     [leftView addBottomConstraintToView:leftView.superview attribute:NSLayoutAttributeBottom relation:NSLayoutRelationEqual constant:-10.0];
 }
 
-- (void)testAddCenterXCenterXConstraints
+- (void)createViewWithCenterXCenterYConstraints
 {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     label.text = @"Some centered text";
@@ -52,7 +52,7 @@
     [label addCenterYConstraintToView:label.superview relation:NSLayoutRelationEqual constant:0.0];
 }
 
-- (void)testAddWidthHeightConstraints
+- (void)createViewWithAddWidthHeightConstraints
 {
     UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
     view.backgroundColor = [UIColor blueColor];
