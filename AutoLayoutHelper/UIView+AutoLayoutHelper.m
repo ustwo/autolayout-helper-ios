@@ -43,8 +43,8 @@
     {
         NSLayoutConstraint *topConstraint = [self addTopConstraintToView:superview relation:NSLayoutRelationEqual constant:edges.top];
         NSLayoutConstraint *leftConstraint = [self addLeftConstraintToView:superview relation:NSLayoutRelationEqual constant:edges.left];
-        NSLayoutConstraint *bottomConstraint = [self addBottomConstraintToView:superview relation:NSLayoutRelationEqual constant:edges.bottom];
-        NSLayoutConstraint *rightConstraint = [self addRightConstraintToView:superview relation:NSLayoutRelationEqual constant:edges.right];
+        NSLayoutConstraint *bottomConstraint = [self addBottomConstraintToView:superview relation:NSLayoutRelationEqual constant:-edges.bottom];
+        NSLayoutConstraint *rightConstraint = [self addRightConstraintToView:superview relation:NSLayoutRelationEqual constant:-edges.right];
 
         constraints = @[topConstraint, leftConstraint, bottomConstraint, rightConstraint];
     }
